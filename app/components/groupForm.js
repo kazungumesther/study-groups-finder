@@ -14,8 +14,8 @@ export default function GroupForm({ addGroup }) {
     const newGroup = { 
       title: title, 
       subject: subject, 
-      meetingdate: meetingDate, // Saves your calendar date state
-      meetingtime: meetingTime, // Saves your clock time state
+      meetingdate: meetingDate, 
+      meetingtime: meetingTime, 
       completed: false, 
       members: 1, 
       notes: [], 
