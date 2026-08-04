@@ -206,7 +206,7 @@ input[placeholder="Search by subject"]:focus {
 
 .note-input-field {
   flex: 1 !important;
-  width: auto !important;
+  width: 70% !important;
   height: 44px !important;
   padding: 8px 12px !important;
   font-size: 18px !important;
@@ -325,7 +325,7 @@ input[placeholder="Search by subject"]:focus {
   width: 100% !important;
 }
 
-.custom-study-card {
+/* .custom-study-card {
   background: #ffffff !important;
   border-radius: 8px !important;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
@@ -335,7 +335,7 @@ input[placeholder="Search by subject"]:focus {
   flex-direction: column !important;
   justify-content: space-between !important;
   box-sizing: border-box !important;
-}
+} */
 
 .card-top-header {
   border-bottom: 2px solid #edf2f7 !important;
