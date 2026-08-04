@@ -1,65 +1,81 @@
-"use client";
-import { useState } from "react";
+import { useState } from "react"; 
 
-function GroupForm({ addGroup }) {
-  const [name, setName] = useState("");
-  const [subject, setSubject] = useState("");
-  const [meetingDate, setMeetingDate] = useState("");
-  const [meetingTime, setMeetingTime] = useState("");
+export default function GroupForm({ addGroup }) { 
+  const [title, setTitle] = useState(""); 
+  const [subject, setSubject] = useState(""); 
+  const [meetingDate, setMeetingDate] = useState(""); 
+  const [meetingTime, setMeetingTime] = useState(""); 
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (e) => { 
+    e.preventDefault(); 
+    
+    if (!title || !subject) return; 
 
-    const newGroup = {
-      name,
-      subject,
-      meetingDate,
-      meetingTime,
-      members: 1,
-      notes:[],
-    };
+    const newGroup = { 
+      title: title, 
+      subject: subject, 
+      meetingdate: meetingDate, // Saves your calendar date state
+      meetingtime: meetingTime, // Saves your clock time state
+      completed: false, 
+      members: 1, 
+      notes: [], 
+    }; 
 
-    addGroup(newGroup);
+    addGroup(newGroup); 
 
-    setName("");
-    setSubject("");
-    setMeetingDate("");
-    setMeetingTime("");
-  };
+    setTitle(""); 
+    setSubject(""); 
+    setMeetingDate(""); 
+    setMeetingTime(""); 
+  }; 
 
-  return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Group Name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
+  return ( 
+    <form className="group-form" onSubmit={handleSubmit}> 
+      <div className="input-group"> 
+        <label className="hidden-label">Group Name</label> 
+        <input 
+          type="text" 
+          placeholder="Group Name" 
+          value={title} 
+          onChange={(e) => setTitle(e.target.value)} 
+        /> 
+      </div> 
 
-      <input
-        type="text"
-        placeholder="Subject"
-        value={subject}
-        onChange={(e) => setSubject(e.target.value)}
-      />
+      <div className="input-group"> 
+        <label className="hidden-label">Subject</label> 
+        <input 
+          type="text" 
+          placeholder="Subject" 
+          value={subject} 
+          onChange={(e) => setSubject(e.target.value)} 
+        /> 
+      </div> 
 
-      <input
-        type="date"
-        value={meetingDate}
-        onChange={(e) => setMeetingDate(e.target.value)}
-      />
+      <div className="input-group"> 
+        <label htmlFor="meetingDate">Meeting Date</label> 
+        <input 
+          id="meetingDate" 
+          type="date" 
+          value={meetingDate} 
+          onChange={(e) => setMeetingDate(e.target.value)} 
+        /> 
+      </div> 
 
-      <input
-        type="time"
-        value={meetingTime}
-        onChange={(e) => setMeetingTime(e.target.value)}
-      />
+      <div className="input-group"> 
+        <label htmlFor="meetingTime">Meeting Time</label> 
+        <input 
+          id="meetingTime" 
+          type="time" 
+          value={meetingTime} 
+          onChange={(e) => setMeetingTime(e.target.value)} 
+        /> 
+      </div> 
 
-      <button type="submit">
-        Create Group
-      </button>
-    </form>
-  );
+      <div className="input-group"> 
+        <button type="submit" className="create-btn"> 
+          Create Group 
+        </button> 
+      </div> 
+    </form> 
+  ); 
 }
-
-export default GroupForm;

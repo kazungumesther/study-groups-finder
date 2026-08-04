@@ -1,97 +1,246 @@
-
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f0f8ff;
+  color: #1a1a1a;
+  -webkit-font-smoothing: antialiased;
+  font-size: 18px !important;
 }
 
 .App {
-  padding: 30px;
-  background-color: #c9e5e9;
-  min-height: 100vh;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 40px 48px !important;
+  text-align: left !important;
 }
-
-h1 {
-  color: darkblue;
-}
-h2 {
-  color: darkblue;
-}
-
-form {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-input {
-  padding: 10px;
-
-input {
-  padding: 10px;
-  margin: 5px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-.group-card {
-  background: white;
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-}
-
-button {
-  background-color: rgb(80, 67, 161);
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover{
-  opacity: 0.9;
-}
-.delete-btn {
-  background-color: rgb(213, 43, 43);
-  color: white;
-  border: none;
-  padding: 10px;
-  margin-left: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-
-
-
 
 .app-title {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 2rem;
-  color: #00008B; 
+  font-size: 3rem !important;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 40px !important;
+}
+
+.title-icon {
+  color: #3b82f6;
+}
+
+h2 {
+  font-size: 2.2rem !important;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-top: 48px !important;
+  margin-bottom: 24px !important;
+}
+
+.no-groups {
+  color: #64748b;
+  font-style: italic;
+  font-size: 18px !important;
+}
+
+.group-form {
+  display: flex !important;
+  flex-wrap: wrap;
+  align-items: flex-end !important;
+  gap: 16px;
   margin-bottom: 24px;
 }
 
-
-.title-icon {
-  color: #3b82f6; 
-  flex-shrink: 0;
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
+.input-group label {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #334155;
+  text-align: left;
+}
+
+.hidden-label {
+  visibility: hidden;
+  pointer-events: none;
+  user-select: none;
+}
+
+.input-group input[type="text"],
+.input-group input[type="date"],
+.input-group input[type="time"],
+input[placeholder="Search by subject"] {
+  height: 48px !important;
+  width: 100%;
+  max-width: 220px !important;
+  padding: 8px 12px;
+  font-size: 18px !important;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #0f172a;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input[placeholder="Search by subject"] {
+  max-width: 280px !important;
+  margin-bottom: 32px;
+  display: block;
+}
+
+.input-group input:focus,
+input[placeholder="Search by subject"]:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.create-btn {
+  height: 48px !important;
+  background-color: #4f46e5;
+  color: #ffffff;
+  border: none;
+  padding: 0 24px !important;
+  border-radius: 6px;
+  font-size: 18px !important;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.15s ease;
+}
+
+.create-btn:hover {
+  background-color: #4338ca;
+}
+
+.group-list-container {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 40px !important;
+  margin-top: 24px !important;
+}
+
+.group-item {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+  gap: 10px !important;
+  width: 100% !important;
+}
+
+.group-item h3 {
+  font-size: 28px !important;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin: 0 0 4px 0 !important;
+}
+
+.group-item p {
+  font-size: 18px !important;
+  color: #1a1a1a;
+  margin: 0 !important;
+  font-weight: 500;
+}
+
+.note-row-layout {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 12px !important;       
+  margin-top: 12px !important;
+  width: auto !important;
+}
+
+
+.note-input-field {
+  width: 260px !important;
+  height: 44px !important;
+  padding: 8px 12px !important;
+  font-size: 18px !important;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  box-sizing: border-box !important;
+  background-color: #ffffff;
+}
+
+.add-note-btn {
+  height: 34px !important;
+  padding: 0 10px !important;
+  font-size: 16px !important;
+  font-weight: 600;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.group-item h4 {
+  font-size: 20px !important;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 16px 0 4px 0 !important;
+}
+
+.notes-display-list {
+  padding-left: 24px !important;
+  margin: 0 !important;
+  font-size: 18px !important;
+}
+
+.notes-display-list li {
+  margin-bottom: 6px;
+}
+
+.join-btn {
+  background-color: #4f46e5!important;
+  color: white !important;
+  font-size: 16px !important;
+  font-weight: 600;
+  height: 38px !important;
+  padding: 0 20px !important;
+  border: none !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  margin-top: 8px !important;
+  width: fit-content !important;
+}
+
+.delete-btn {
+  background-color: #e66060 !important;
+  color: white !important;
+  font-size: 16px !important;
+  font-weight: 600;
+  height: 38px !important;
+  padding: 0 20px !important;
+  border: none !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  margin-top: 12px !important;
+  width: fit-content !important;
+}
+.leave-btn {
+  background-color: #59cce6 !important; 
+  color: white !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  height: 38px !important;
+  padding: 0 20px !important;
+  border: none !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  width: fit-content !important;
+}
+
+.leave-btn:hover {
+  background-color: #a1dbdf !important;
+}
 
