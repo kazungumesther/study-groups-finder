@@ -2,6 +2,7 @@
 import { useState } from "react";
 import GroupForm from "./components/groupForm";
 import GroupList from "./components/groupList";
+import { BookOpen } from 'lucide-react';
 import "./globals.css";
 
 interface Group {
@@ -57,9 +58,12 @@ const filteredGroups = groups.filter(group =>
 );
 
 
-  return (
+    return (
     <div className="App">
-      <h1>📚 Study Group Finder</h1>
+      <h1 className="app-title">
+        <BookOpen className="title-icon" size={32} strokeWidth={2.5} />
+        Study Group Finder
+      </h1>
 
       <GroupForm addGroup={addGroup} />
 

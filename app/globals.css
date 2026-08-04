@@ -1,16 +1,11 @@
-/* @import "tailwindcss"; */
+
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-/* @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-} */
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -79,4 +74,24 @@ button:hover{
   border-radius: 5px;
   cursor: pointer;
 }
+
+
+
+
+
+.app-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 2rem;
+  color: #00008B; 
+  margin-bottom: 24px;
+}
+
+
+.title-icon {
+  color: #3b82f6; 
+  flex-shrink: 0;
+}
+
 
