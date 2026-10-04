@@ -18,7 +18,7 @@ Check out the live production deployment here: [(https://study-groups-finder.ver
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 *   **Framework:** [Next.js](https://nextjs.org) (Using the modern `app/` router layout)
 *   **Bundler:** [Turbopack](https://nextjs.orgdocs/app/api-reference/turbopack) (For lightning-fast local development builds)
@@ -99,6 +99,6 @@ npm run start
 
 ---
 
-## 👥 Contributors
+##  Contributors
 
-*   **kazungumesther** — Lead Developer & Project Creator
+*   **kazungumesther** — Project Creator
