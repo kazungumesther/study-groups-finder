@@ -1,4 +1,4 @@
-# 🔍 Study Group Finder
+#  Study Group Finder
 
 A modern, fast web application built to help users seamlessly create and discover local study groups. 
 
@@ -46,15 +46,15 @@ study-groups-finder/
 
 ---
 
-## ⚡ Getting Started
+##  Getting Started
 
 Follow these steps to run this application locally on your machine.
 
-### 📋 Prerequisites
+### Prerequisites
 
 Ensure you have **Node.js** (v18.x or higher recommended) and **npm** installed.
 
-### 🔧 Local Installation
+###  Local Installation
 
 1. Clone this repository:
    ```bash
@@ -71,7 +71,7 @@ Ensure you have **Node.js** (v18.x or higher recommended) and **npm** installed.
    npm install
    ```
 
-### 💻 Running the Development Server
+###  Running the Development Server
 
 Start your development server with Next.js Turbopack execution:
 
@@ -83,7 +83,7 @@ Open [http://localhost:3000](http://localhost:3000) inside your browser to view 
 
 ---
 
-## 📦 Production & Deployment
+##  Production & Deployment
 
 To generate an optimized build for deployment:
 
